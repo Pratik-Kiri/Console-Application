@@ -49,8 +49,6 @@ namespace Game_Zone
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
             lbldate.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
 
@@ -151,11 +149,7 @@ namespace Game_Zone
             {
                 
                 DialogResult confirm = MessageBox.Show("Platform:"+lstconsole.Text+"\nGames:"+s1+"\nTime:"+s2,"Confirmation",MessageBoxButtons.OKCancel);
-                  if(confirm==DialogResult.OK)
-                {
-                 
-                }
-                  else if(confirm==DialogResult.Cancel)
+                if(confirm==DialogResult.Cancel)
                 {
 
                     chkfifa.Checked = false;
@@ -773,7 +767,7 @@ namespace Game_Zone
             saveFile.FileName = "Notepad Text";
             saveFile.Filter = "Text File (*.txt)|*.txt|All files (*.*)|*.*";
 
-                if (saveFile.ShowDialog() == DialogResult.OK)
+            if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 using (System.IO.StreamWriter sw = new System.IO.StreamWriter(saveFile.FileName))
                 sw.WriteLine(rtfReceipt.Text);
@@ -803,21 +797,6 @@ namespace Game_Zone
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbltime.Text = DateTime.Now.ToLongTimeString();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void lstconsole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
